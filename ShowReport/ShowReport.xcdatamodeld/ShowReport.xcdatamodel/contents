@@ -1,4 +1,28 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="1" systemVersion="11A491" minimumToolsVersion="Automatic" sourceLanguage="Swift" usedWithCloudKit="false" userDefinedModelVersionIdentifier="">
-    <elements/>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="14838.16" systemVersion="19A471t" minimumToolsVersion="Automatic" sourceLanguage="Swift" usedWithCloudKit="NO" userDefinedModelVersionIdentifier="">
+    <entity name="Genre" representedClassName="Genre" syncable="YES" codeGenerationType="class">
+        <attribute name="name" attributeType="String"/>
+        <attribute name="productionsCount" optional="YES" attributeType="Integer 64" derived="YES" derivationExpression="productions.@count" usesScalarValueType="YES"/>
+        <relationship name="productions" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Production" inverseName="genre" inverseEntity="Production"/>
+    </entity>
+    <entity name="Production" representedClassName="Production" syncable="YES" codeGenerationType="class">
+        <attribute name="date" optional="YES" attributeType="Date" defaultDateTimeInterval="581672880" usesScalarValueType="NO"/>
+        <attribute name="director" optional="YES" attributeType="String"/>
+        <attribute name="summary" optional="YES" attributeType="String"/>
+        <attribute name="title" attributeType="String"/>
+        <attribute name="writer" optional="YES" attributeType="String"/>
+        <relationship name="genre" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Genre" inverseName="productions" inverseEntity="Genre"/>
+        <relationship name="venue" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Venue" inverseName="productions" inverseEntity="Venue"/>
+    </entity>
+    <entity name="Venue" representedClassName="Venue" syncable="YES" codeGenerationType="class">
+        <attribute name="address" optional="YES" attributeType="String"/>
+        <attribute name="city" optional="YES" attributeType="String"/>
+        <attribute name="name" attributeType="String"/>
+        <relationship name="productions" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Production" inverseName="venue" inverseEntity="Production"/>
+    </entity>
+    <elements>
+        <element name="Genre" positionX="-54" positionY="18" width="128" height="88"/>
+        <element name="Production" positionX="-63" positionY="-18" width="128" height="148"/>
+        <element name="Venue" positionX="-36" positionY="45" width="128" height="103"/>
+    </elements>
 </model>
