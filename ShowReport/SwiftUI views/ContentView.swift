@@ -9,15 +9,18 @@
 import SwiftUI
 
 struct ContentView : View {
+    var productions: [ProductionListViewable] = []
     var body: some View {
-        Text("Hello World")
+        NavigationView {
+            ProductionListView(productions: productions)
+        }
     }
 }
 
 #if DEBUG
 struct ContentView_Previews : PreviewProvider {
     static var previews: some View {
-        ContentView()
+        ContentView(productions: demoProductions)
     }
 }
 #endif
