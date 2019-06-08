@@ -9,10 +9,10 @@
 import SwiftUI
 
 struct ProductionListCell : View {
-    var production: ProductionListViewable
+    var production: ProductionCellViewable
 
     var body: some View {
-        HStack(alignment: .firstTextBaseline) {
+        HStack(alignment: .center) {
             VStack(alignment: .leading) {
                 Text(production.titleText)
                     .allowsTightening(true)

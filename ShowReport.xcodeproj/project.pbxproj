@@ -8,9 +8,13 @@
 
 /* Begin PBXBuildFile section */
 		390ED8A122ABA78C0095B189 /* ProductionListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 390ED8A022ABA78C0095B189 /* ProductionListView.swift */; };
-		390ED8A422ABA80A0095B189 /* ProductionListViewable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 390ED8A322ABA80A0095B189 /* ProductionListViewable.swift */; };
+		390ED8A422ABA80A0095B189 /* ProductionCellViewable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 390ED8A322ABA80A0095B189 /* ProductionCellViewable.swift */; };
 		390ED8A622ABA9080095B189 /* DemoProduction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 390ED8A522ABA9080095B189 /* DemoProduction.swift */; };
 		39164E7022ABBC620015D311 /* ProductionListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39164E6F22ABBC620015D311 /* ProductionListCell.swift */; };
+		39164E7222ABBDEF0015D311 /* ProductionDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39164E7122ABBDEF0015D311 /* ProductionDetailView.swift */; };
+		39164E7422ABBE1D0015D311 /* ProductionDetailViewable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39164E7322ABBE1D0015D311 /* ProductionDetailViewable.swift */; };
+		39164E7622ABC3150015D311 /* ProductionListViewable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39164E7522ABC3150015D311 /* ProductionListViewable.swift */; };
+		39164E7922ABC39C0015D311 /* Production+ViewProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39164E7822ABC39C0015D311 /* Production+ViewProtocols.swift */; };
 		391A18DE22ABB25100A97784 /* productions.json in Resources */ = {isa = PBXBuildFile; fileRef = 391A18DD22ABB25100A97784 /* productions.json */; };
 		39DCA35122AB937800CF71C4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39DCA35022AB937800CF71C4 /* AppDelegate.swift */; };
 		39DCA35322AB937800CF71C4 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39DCA35222AB937800CF71C4 /* SceneDelegate.swift */; };
@@ -34,9 +38,13 @@
 
 /* Begin PBXFileReference section */
 		390ED8A022ABA78C0095B189 /* ProductionListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductionListView.swift; sourceTree = "<group>"; };
-		390ED8A322ABA80A0095B189 /* ProductionListViewable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductionListViewable.swift; sourceTree = "<group>"; };
+		390ED8A322ABA80A0095B189 /* ProductionCellViewable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductionCellViewable.swift; sourceTree = "<group>"; };
 		390ED8A522ABA9080095B189 /* DemoProduction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DemoProduction.swift; sourceTree = "<group>"; };
 		39164E6F22ABBC620015D311 /* ProductionListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductionListCell.swift; sourceTree = "<group>"; };
+		39164E7122ABBDEF0015D311 /* ProductionDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductionDetailView.swift; sourceTree = "<group>"; };
+		39164E7322ABBE1D0015D311 /* ProductionDetailViewable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductionDetailViewable.swift; sourceTree = "<group>"; };
+		39164E7522ABC3150015D311 /* ProductionListViewable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductionListViewable.swift; sourceTree = "<group>"; };
+		39164E7822ABC39C0015D311 /* Production+ViewProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Production+ViewProtocols.swift"; sourceTree = "<group>"; };
 		391A18DD22ABB25100A97784 /* productions.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = productions.json; sourceTree = "<group>"; };
 		39DCA34D22AB937800CF71C4 /* ShowReport.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ShowReport.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		39DCA35022AB937800CF71C4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -75,9 +83,19 @@
 		390ED8A222ABA7EF0095B189 /* Presentation Model */ = {
 			isa = PBXGroup;
 			children = (
-				390ED8A322ABA80A0095B189 /* ProductionListViewable.swift */,
+				390ED8A322ABA80A0095B189 /* ProductionCellViewable.swift */,
+				39164E7322ABBE1D0015D311 /* ProductionDetailViewable.swift */,
+				39164E7522ABC3150015D311 /* ProductionListViewable.swift */,
 			);
 			path = "Presentation Model";
+			sourceTree = "<group>";
+		};
+		39164E7722ABC38B0015D311 /* Data Model */ = {
+			isa = PBXGroup;
+			children = (
+				39164E7822ABC39C0015D311 /* Production+ViewProtocols.swift */,
+			);
+			path = "Data Model";
 			sourceTree = "<group>";
 		};
 		3927A68F22ABA6DB00DB36FE /* SwiftUI views */ = {
@@ -86,6 +104,7 @@
 				39DCA35722AB937800CF71C4 /* ContentView.swift */,
 				390ED8A022ABA78C0095B189 /* ProductionListView.swift */,
 				39164E6F22ABBC620015D311 /* ProductionListCell.swift */,
+				39164E7122ABBDEF0015D311 /* ProductionDetailView.swift */,
 			);
 			path = "SwiftUI views";
 			sourceTree = "<group>";
@@ -112,6 +131,7 @@
 		39DCA34F22AB937800CF71C4 /* ShowReport */ = {
 			isa = PBXGroup;
 			children = (
+				39164E7722ABC38B0015D311 /* Data Model */,
 				390ED8A222ABA7EF0095B189 /* Presentation Model */,
 				3927A68F22ABA6DB00DB36FE /* SwiftUI views */,
 				39DCA35022AB937800CF71C4 /* AppDelegate.swift */,
@@ -256,13 +276,17 @@
 			buildActionMask = 2147483647;
 			files = (
 				39DCA35622AB937800CF71C4 /* ShowReport.xcdatamodeld in Sources */,
-				390ED8A422ABA80A0095B189 /* ProductionListViewable.swift in Sources */,
+				390ED8A422ABA80A0095B189 /* ProductionCellViewable.swift in Sources */,
 				390ED8A122ABA78C0095B189 /* ProductionListView.swift in Sources */,
 				39DCA35122AB937800CF71C4 /* AppDelegate.swift in Sources */,
 				390ED8A622ABA9080095B189 /* DemoProduction.swift in Sources */,
 				39DCA35822AB937800CF71C4 /* ContentView.swift in Sources */,
+				39164E7422ABBE1D0015D311 /* ProductionDetailViewable.swift in Sources */,
 				39164E7022ABBC620015D311 /* ProductionListCell.swift in Sources */,
 				39DCA35322AB937800CF71C4 /* SceneDelegate.swift in Sources */,
+				39164E7622ABC3150015D311 /* ProductionListViewable.swift in Sources */,
+				39164E7222ABBDEF0015D311 /* ProductionDetailView.swift in Sources */,
+				39164E7922ABC39C0015D311 /* Production+ViewProtocols.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -8,12 +8,15 @@
 
 import SwiftUI
 
+
 struct ProductionListView : View {
     var productions: [ProductionListViewable]
 
     var body: some View {
         List(productions.identified(by: \.hashValue)) { production in
-            ProductionListCell(production: production)
+            NavigationButton(destination: ProductionDetailView(production: production)) {
+                ProductionListCell(production: production)
+            }
         }
         .navigationBarTitle(Text("Productions"))
     }

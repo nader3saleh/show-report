@@ -15,7 +15,7 @@ struct DemoProduction: Codable {
     var genre: String
 }
 
-extension DemoProduction: ProductionListViewable {
+extension DemoProduction: ProductionCellViewable, ProductionDetailViewable {
     var hashValue: Int { id.hashValue }
     var titleText: String { title }
     var locationText: String { location }
