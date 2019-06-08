@@ -40,6 +40,7 @@
 		39DCA36622AB937A00CF71C4 /* ShowReportTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ShowReportTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		39DCA36A22AB937A00CF71C4 /* ShowReportTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowReportTests.swift; sourceTree = "<group>"; };
 		39DCA36C22AB937A00CF71C4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		39DCA37522AB939000CF71C4 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,6 +67,7 @@
 				39DCA34F22AB937800CF71C4 /* ShowReport */,
 				39DCA36922AB937A00CF71C4 /* ShowReportTests */,
 				39DCA34E22AB937800CF71C4 /* Products */,
+				39DCA37622AB989600CF71C4 /* Docs */,
 			);
 			sourceTree = "<group>";
 		};
@@ -108,6 +110,14 @@
 				39DCA36C22AB937A00CF71C4 /* Info.plist */,
 			);
 			path = ShowReportTests;
+			sourceTree = "<group>";
+		};
+		39DCA37622AB989600CF71C4 /* Docs */ = {
+			isa = PBXGroup;
+			children = (
+				39DCA37522AB939000CF71C4 /* README.md */,
+			);
+			name = Docs;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
