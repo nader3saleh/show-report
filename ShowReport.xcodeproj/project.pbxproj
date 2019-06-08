@@ -10,6 +10,7 @@
 		390ED8A122ABA78C0095B189 /* ProductionListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 390ED8A022ABA78C0095B189 /* ProductionListView.swift */; };
 		390ED8A422ABA80A0095B189 /* ProductionListViewable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 390ED8A322ABA80A0095B189 /* ProductionListViewable.swift */; };
 		390ED8A622ABA9080095B189 /* DemoProduction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 390ED8A522ABA9080095B189 /* DemoProduction.swift */; };
+		39164E7022ABBC620015D311 /* ProductionListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39164E6F22ABBC620015D311 /* ProductionListCell.swift */; };
 		391A18DE22ABB25100A97784 /* productions.json in Resources */ = {isa = PBXBuildFile; fileRef = 391A18DD22ABB25100A97784 /* productions.json */; };
 		39DCA35122AB937800CF71C4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39DCA35022AB937800CF71C4 /* AppDelegate.swift */; };
 		39DCA35322AB937800CF71C4 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39DCA35222AB937800CF71C4 /* SceneDelegate.swift */; };
@@ -35,6 +36,7 @@
 		390ED8A022ABA78C0095B189 /* ProductionListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductionListView.swift; sourceTree = "<group>"; };
 		390ED8A322ABA80A0095B189 /* ProductionListViewable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductionListViewable.swift; sourceTree = "<group>"; };
 		390ED8A522ABA9080095B189 /* DemoProduction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DemoProduction.swift; sourceTree = "<group>"; };
+		39164E6F22ABBC620015D311 /* ProductionListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductionListCell.swift; sourceTree = "<group>"; };
 		391A18DD22ABB25100A97784 /* productions.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = productions.json; sourceTree = "<group>"; };
 		39DCA34D22AB937800CF71C4 /* ShowReport.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ShowReport.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		39DCA35022AB937800CF71C4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -83,6 +85,7 @@
 			children = (
 				39DCA35722AB937800CF71C4 /* ContentView.swift */,
 				390ED8A022ABA78C0095B189 /* ProductionListView.swift */,
+				39164E6F22ABBC620015D311 /* ProductionListCell.swift */,
 			);
 			path = "SwiftUI views";
 			sourceTree = "<group>";
@@ -258,6 +261,7 @@
 				39DCA35122AB937800CF71C4 /* AppDelegate.swift in Sources */,
 				390ED8A622ABA9080095B189 /* DemoProduction.swift in Sources */,
 				39DCA35822AB937800CF71C4 /* ContentView.swift in Sources */,
+				39164E7022ABBC620015D311 /* ProductionListCell.swift in Sources */,
 				39DCA35322AB937800CF71C4 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
