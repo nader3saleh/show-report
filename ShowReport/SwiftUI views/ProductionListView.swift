@@ -13,12 +13,18 @@ struct ProductionListView : View {
 
     var body: some View {
         List(productions.identified(by: \.hashValue)) { production in
-            VStack(alignment: .leading) {
-                Text(production.titleText)
-                    .allowsTightening(/*@START_MENU_TOKEN@*/true/*@END_MENU_TOKEN@*/)
-                Text(production.locationText)
-                    .font(.subheadline)
-                    .foregroundColor(.secondary)
+            HStack(alignment: .firstTextBaseline) {
+                VStack(alignment: .leading) {
+                    Text(production.titleText)
+                        .allowsTightening(/*@START_MENU_TOKEN@*/true/*@END_MENU_TOKEN@*/)
+                    Text(production.locationText)
+                        .font(.subheadline)
+                        .foregroundColor(.secondary)
+                }
+                Spacer()
+                Text(production.genreText.uppercased())
+                    .font(.caption)
+                    .color(.accentColor)
             }
         }
         .navigationBarTitle(Text("Productions"))

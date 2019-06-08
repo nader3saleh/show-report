@@ -12,14 +12,19 @@ protocol ProductionListViewable {
     var hashValue: Int { get }
     var titleText: String { get }
     var locationText: String { get }
+    var genreText: String { get }
 }
 
 extension Production: ProductionListViewable {
     var titleText: String {
-        self.title ?? "(no title set)"
+        title ?? "(no title set)"
     }
 
     var locationText: String {
-        self.venue?.name ?? "(no location set)"
+        venue?.name ?? "(no location set)"
+    }
+
+    var genreText: String {
+        genre?.name ?? "—"
     }
 }
