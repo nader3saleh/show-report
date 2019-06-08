@@ -8,23 +8,36 @@
 
 import Foundation
 
-struct DemoProduction: ProductionListViewable {
-    var id = UUID()
-    var titleText: String
-    var locationText: String
-    var genreText: String
+struct DemoProduction: Codable {
+    var id: Int
+    var title: String
+    var location: String
+    var genre: String
+}
 
-    var hashValue: Int {
-        id.hashValue
+extension DemoProduction: ProductionListViewable {
+    var hashValue: Int { id.hashValue }
+    var titleText: String { title }
+    var locationText: String { location }
+    var genreText: String { genre }
+}
+
+func loadDemoProductions() -> [DemoProduction] {
+    guard
+        let file = Bundle.main.url(forResource: "productions.json", withExtension: nil)
+        else { fatalError("Couldn't load productions JSON from main bundle") }
+    let data: Data
+    do {
+        data = try Data(contentsOf: file)
+    } catch {
+        fatalError("Couldn't load data from productions JSON")
+    }
+    do {
+        let decoder = JSONDecoder()
+        return try decoder.decode([DemoProduction].self, from: data)
+    } catch {
+        fatalError("Couldn't parse JSON data: \(error)")
     }
 }
 
-let demoProductions: [DemoProduction] = [
-    DemoProduction(titleText: "A Midsummer Night’s Dream", locationText: "Bridge Theatre", genreText: "Shakespeare"),
-    DemoProduction(titleText: "Death of a Salesman", locationText: "Young Vic", genreText: "Drama"),
-    DemoProduction(titleText: "Rosmersholm", locationText: "Duke of York’s", genreText: "Drama"),
-    DemoProduction(titleText: "The Secret Diary of Adrian Mole aged 13¾ – The Musical", locationText: "Ambassadors Theatre", genreText: "Musical"),
-    DemoProduction(titleText: "Man of La Mancha", locationText: "London Coliseum", genreText: "Musical"),
-    DemoProduction(titleText: "On Your Feet – The Gloria Estefan Musical", locationText: "London Coliseum", genreText: "Musical"),
-    DemoProduction(titleText: "Waitress", locationText: "Adelphi Theatre", genreText: "Musical")
-]
+let demoProductions: [DemoProduction] = loadDemoProductions()

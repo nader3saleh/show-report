@@ -1,0 +1,44 @@
+[
+  {
+    "id": 1,
+    "genre": "Shakespeare",
+    "location": "Bridge Theatre",
+    "title": "A Midsummer Night’s Dream"
+  },
+  {
+    "id": 2,
+    "genre": "Drama",
+    "location": "Young Vic",
+    "title": "Death of a Salesman"
+  },
+  {
+    "id": 3,
+    "genre": "Drama",
+    "location": "Duke of York’s",
+    "title": "Rosmersholm"
+  },
+  {
+    "id": 4,
+    "genre": "Musical",
+    "location": "Ambassadors Theatre",
+    "title": "The Secret Diary of Adrian Mole aged 13¾ – The Musical"
+  },
+  {
+    "id": 5,
+    "genre": "Musical",
+    "location": "London Coliseum",
+    "title": "Man of La Mancha"
+  },
+  {
+    "id": 6,
+    "genre": "Musical",
+    "location": "London Coliseum",
+    "title": "On Your Feet – The Gloria Estefan Musical"
+  },
+  {
+    "id": 7,
+    "genre": "Musical",
+    "location": "Adelphi Theatre",
+    "title": "Waitress"
+  }
+]
