@@ -62,6 +62,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3927A68F22ABA6DB00DB36FE /* SwiftUI views */ = {
+			isa = PBXGroup;
+			children = (
+				39DCA35722AB937800CF71C4 /* ContentView.swift */,
+			);
+			path = "SwiftUI views";
+			sourceTree = "<group>";
+		};
 		39DCA34422AB937800CF71C4 = {
 			isa = PBXGroup;
 			children = (
@@ -84,9 +92,9 @@
 		39DCA34F22AB937800CF71C4 /* ShowReport */ = {
 			isa = PBXGroup;
 			children = (
+				3927A68F22ABA6DB00DB36FE /* SwiftUI views */,
 				39DCA35022AB937800CF71C4 /* AppDelegate.swift */,
 				39DCA35222AB937800CF71C4 /* SceneDelegate.swift */,
-				39DCA35722AB937800CF71C4 /* ContentView.swift */,
 				39DCA35922AB937A00CF71C4 /* Assets.xcassets */,
 				39DCA35E22AB937A00CF71C4 /* LaunchScreen.storyboard */,
 				39DCA36122AB937A00CF71C4 /* Info.plist */,
